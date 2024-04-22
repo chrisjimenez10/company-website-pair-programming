@@ -29,6 +29,21 @@ const CONTACTUS = {
     isOpen: true,
 }
 
+const LINKS = [
+    {company: "Facebook", url: "https://www.facebook.com/"},
+    {company: "Netflix", url: "https://www.netflix.com/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse"},
+    {company: "Capital-One", url: "https://www.capitalone.com/?external_id=WWW_XXXXX_XXX_SEM-Brand_Google_ZZ_ZZ_T_Home_ZZ_b12cc208-32e5-4dba-8c49-61064f8f2b63_86032&target_id=aud-1074200827882:kwd-16416311&oC=CO5ed2SUs1&gad_source=1&gclid=Cj0KCQjwlZixBhCoARIsAIC745DVXZ7GJw7Lgn9NNEVxz_DV7CPxm_4HsW6CURHBm7g6JwTP3vI3fXsaAlGVEALw_wcB"},
+    {company: "ESPN", url: "https://www.espn.com/"},
+    {company: "Google", url: "https://www.google.com/"},
+]
+
+const STAFF = [
+    {name: "Karlon Heileman", age: 44, email: "karlonheileman@gmail.com", position: "Co-Founder", bio: "Go Army!"},
+    {name: "Chris Jimenez", age: 29, email: "jimenezchris@gmail.com", position: "Co-Founder", bio: "Go Soccer!"},
+    {name: "Courtney Smith", age: 36, email: "smithcourtney@gmail.com", position: "Lead Tech", bio: "Full-Stack Software Engineer with a backgorund in Computer Science from MIT"},
+    {name: "Kim Johnson", age: 32, email: "johnsonkim@gmail.com", position: "Lead Designer", bio: "Front-End Web Designer with a background in Fashion Studies from Cal Tech"},
+]
+
 
 
 
@@ -100,6 +115,6 @@ app.get("/staff", (req, res)=>{
     //Links Show Page
 app.get("/links", (req, res)=>{
     res.render("links.ejs", {
-
+        links: LINKS
     })
 })
