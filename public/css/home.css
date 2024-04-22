@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url("https://cdn.leonardo.ai/users/18ef5c8a-497b-4042-8160-eb179278acf6/generations/82f26c70-3a42-4e80-801b-b620964f01de/Default_IT_agency_real_city_0.jpg");
+    background-size: 1950px 1200px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+ h1 {
+    background-color: hsla(0, 0%, 16%, 0.25);
+    font-size: 4rem;
+    text-shadow: -5px 5px 0px black;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+}
+ h2{
+    font-size: 2rem;
+    text-shadow: -5px 5px 0px black;
+ }
+ div {
+    background-color: hsla(0, 0%, 16%, 0.25);
+    height: 2rem;
+    border-radius: 10px;
+    padding: 5px;
+}

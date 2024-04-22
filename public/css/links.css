@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: pink;
+    color: black;
+}
+div {
+    background-color: hsla(0, 0%, 16%, 0.25);
+    height: 2rem;
+    border-radius: 10px;
+    padding: 5px;
+}

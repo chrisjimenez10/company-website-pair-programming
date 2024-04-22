@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company History</title>
+    <link rel="stylesheet" href="./css/company-history.css">
 </head>
 <body>
-    <%- include("nav.ejs") %>
+    <div>
+        <%- include("nav.ejs") %>
+    </div>
     <h1>The History of Karlon & Chris Tech Agency</h1>
     <h3><em>The Startup of the Century</em></h3>
     <hr>
-    <p>
-        "Karlon & Chris Tech Agency, founded in 2020 by tech enthusiasts with a passion for innovation, is a dynamic startup IT agency dedicated to revolutionizing digital landscapes. Specializing in bespoke software development, cloud solutions, and cybersecurity,leveraging cutting-edge technologies to empower businesses of all sizes to thrive in the digital age. With a client-centric approach and a commitment to excellence, the agency strives to deliver tailor-made IT solutions that drive efficiency, scalability, and long-term success for its clients across diverse industries."
-    </p>
+    <main>
+        <p><%= companyHistory %></p>
+    </main>
 </body>
 </html>

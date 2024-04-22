@@ -4,8 +4,12 @@ const morgan = require("morgan");
 const { ppid } = require("process");
 
 const app = express();
-app.use(morgan("dev"));
 
+//Middleware
+app.use(morgan("dev"));
+app.use(express.static("public")); //We are telling express to try to match requests with files in the directory called "public"
+
+//Port
 const port = 3000;
 
 //Start Express Server
@@ -44,7 +48,7 @@ const STAFF = [
     {name: "Kim Johnson", age: 32, email: "johnsonkim@gmail.com", position: "Lead Designer", bio: "Front-End Web Designer with a background in Fashion Studies from Cal Tech", path: "kim"},
 ]
 
-
+const COMPANYHISTORY = "Karlon & Chris Tech Agency, founded in 2020 by tech enthusiasts with a passion for innovation, is a dynamic startup IT agency dedicated to revolutionizing digital landscapes. Specializing in bespoke software development, cloud solutions, and cybersecurity,leveraging cutting-edge technologies to empower businesses of all sizes to thrive in the digital age. With a client-centric approach and a commitment to excellence, the agency strives to deliver tailor-made IT solutions that drive efficiency, scalability, and long-term success for its clients across diverse industries.";
 
 
 
@@ -67,7 +71,7 @@ app.get("/", (req, res)=>{
     //Copmany History Show Page
 app.get("/companyhistory", (req, res)=>{
     res.render("company-history.ejs", {
-
+        companyHistory: COMPANYHISTORY
     })
 })
     //Contact Us Show Page
@@ -134,14 +138,6 @@ app.get("/staff/kim", (req, res)=>{
         kim: STAFF[3]
     })
 })
-
-
-
-
-
-
-
-
 
 //---------------------------------------------------------------\\
 

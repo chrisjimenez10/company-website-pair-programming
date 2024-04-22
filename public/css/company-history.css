@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url("https://cdn.leonardo.ai/users/18ef5c8a-497b-4042-8160-eb179278acf6/generations/82f26c70-3a42-4e80-801b-b620964f01de/Default_IT_agency_real_city_3.jpg");
+    color: whitesmoke;
+}
+
+main {
+    background-color: hsla(0, 0%, 16%, 0.87);
+    width: 500px;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.5rem;
+}
+
+div {
+    background-color: hsla(0, 0%, 16%, 0.25);
+    height: 2rem;
+    border-radius: 10px;
+    padding: 5px;
+}

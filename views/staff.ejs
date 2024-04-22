@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff</title>
+    <link rel="stylesheet" href="./css/staff.css">
 </head>
 <body>
-    <%- include("nav.ejs") %>
+    <div><%- include("nav.ejs") %></div>
     <h1>Staff Members</h1>
     <% staff.forEach(person => { %>
         <a href="/staff/<%= person.path %>"><li><%= person.name %></li></a>
