@@ -60,11 +60,9 @@ app.get("/pastwork", (req, res)=>{
     })
 })
 
-app.get("/pastwork/:companyname", (req, res)=>{
-    const companyName = req.params.companyname;
-    PASTWORK.forEach((company)=>{
-        
-    })
+app.get("/pastwork/facebook", (req, res)=>{
+    const facebook = req.params.facebook;
+    res.render("")
 })
 
 
