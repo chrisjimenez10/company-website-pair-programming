@@ -11,7 +11,7 @@
     <hr>
     <% pastWork.forEach(company => { %>
         <ul>
-            <a href="/pastwork/:companyname"><li><%= company.company %></li></a>
+           <a href="/pastwork/<%= company.company %>"><li><%= company.company %></li></a>
         </ul>
     <% }) %>
 </body>

@@ -17,7 +17,7 @@ app.listen(port, ()=>{
 const PASTWORK = [
     {company: "Facebook", staff: 4, duration: "two months", project: "Advertising", completed: true },
     {company: "Netflix", staff: 2, duration: "one month", project: "New Arrivals", completed: false },
-    {company: "Capital One", staff: 3, duration: "three months", project: "Investing Branch", completed: true },
+    {company: "Capital-One", staff: 3, duration: "three months", project: "Investing Branch", completed: true },
     {company: "ESPN", staff: 1, duration: "three weeks", project: "NBA Play-Offs Interface", completed: true },
 ]
 
@@ -60,14 +60,34 @@ app.get("/pastwork", (req, res)=>{
     })
 })
 
-app.get("/pastwork/facebook", (req, res)=>{
+app.get("/pastwork/Facebook", (req, res)=>{
     const facebook = req.params.facebook;
-    res.render("")
+    res.render("past-work-pages/facebook.ejs", {
+
+    })
+})
+app.get("/pastwork/Netflix", (req, res)=>{
+    const facebook = req.params.facebook;
+    res.render("past-work-pages/netflix.ejs", {
+
+    })
+})
+app.get("/pastwork/Capital-One", (req, res)=>{
+    const facebook = req.params.facebook;
+    res.render("past-work-pages/capital-one.ejs", {
+
+    })
+})
+app.get("/pastwork/ESPN", (req, res)=>{
+    const facebook = req.params.facebook;
+    res.render("past-work-pages/espn.ejs", {
+
+    })
 })
 
-
-
-    //Staff Show Page
+//--------------------------------------------------------------\\
+    
+//Staff Show Page
 app.get("/staff", (req, res)=>{
     res.render("staff.ejs", {
 
