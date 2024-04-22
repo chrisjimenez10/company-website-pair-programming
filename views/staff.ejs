@@ -7,6 +7,9 @@
 </head>
 <body>
     <%- include("nav.ejs") %>
-    <h1>Staff</h1>
+    <h1>Staff Members</h1>
+    <% staff.forEach(person => { %>
+        <a href="/staff/<%= person.path %>"><li><%= person.name %></li></a>
+    <% }) %>
 </body>
 </html>

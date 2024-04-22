@@ -16,9 +16,9 @@ app.listen(port, ()=>{
 //Data
 const PASTWORK = [
     {company: "Facebook", staff: 4, duration: "Two months", project: "Advertising", completed: true, description: "Helped Facebook create a robust and dynamic advertising feature" },
-    {company: "Netflix", staff: 2, duration: "one month", project: "New Arrivals", completed: false, description: "Helped Netflix create a carousel feature for their new arrivals" },
-    {company: "Capital-One", staff: 3, duration: "three months", project: "Investing Branch", completed: true, description: "Helped Capital One create their newest financial service of investing with crypto"},
-    {company: "ESPN", staff: 1, duration: "three weeks", project: "NBA Play-Offs Interface", completed: true, description: "Helped ESPN create the newest interface for the NBA play-offs"},
+    {company: "Netflix", staff: 2, duration: "One month", project: "New Arrivals", completed: false, description: "Helped Netflix create a carousel feature for their new arrivals" },
+    {company: "Capital-One", staff: 3, duration: "Three months", project: "Investing Branch", completed: true, description: "Helped Capital One create their newest financial service of investing with crypto"},
+    {company: "ESPN", staff: 1, duration: "Three weeks", project: "NBA Play-Offs Interface", completed: true, description: "Helped ESPN create the newest interface for the NBA play-offs"},
 ]
 
 const CONTACTUS = {
@@ -38,10 +38,10 @@ const LINKS = [
 ]
 
 const STAFF = [
-    {name: "Karlon Heileman", age: 44, email: "karlonheileman@gmail.com", position: "Co-Founder", bio: "Go Army!"},
-    {name: "Chris Jimenez", age: 29, email: "jimenezchris@gmail.com", position: "Co-Founder", bio: "Go Soccer!"},
-    {name: "Courtney Smith", age: 36, email: "smithcourtney@gmail.com", position: "Lead Tech", bio: "Full-Stack Software Engineer with a backgorund in Computer Science from MIT"},
-    {name: "Kim Johnson", age: 32, email: "johnsonkim@gmail.com", position: "Lead Designer", bio: "Front-End Web Designer with a background in Fashion Studies from Cal Tech"},
+    {name: "Karlon Heileman", age: 44, email: "karlonheileman@gmail.com", position: "Co-Founder", bio: "Go Army!", path: "karlon"},
+    {name: "Chris Jimenez", age: 29, email: "jimenezchris@gmail.com", position: "Co-Founder", bio: "Go Soccer!", path: "chris"},
+    {name: "Courtney Smith", age: 36, email: "smithcourtney@gmail.com", position: "Lead Tech", bio: "Full-Stack Software Engineer with a backgorund in Computer Science from MIT", path: "courtney"},
+    {name: "Kim Johnson", age: 32, email: "johnsonkim@gmail.com", position: "Lead Designer", bio: "Front-End Web Designer with a background in Fashion Studies from Cal Tech", path: "kim"},
 ]
 
 
@@ -108,10 +108,43 @@ app.get("/pastwork/ESPN", (req, res)=>{
     
 //Staff Show Page
 app.get("/staff", (req, res)=>{
-    res.render("staff.ejs", {
 
+    res.render("staff.ejs", {
+        staff: STAFF
     })
 })
+
+app.get("/staff/karlon", (req, res)=>{
+    res.render("staff-pages/karlon.ejs", {
+        karlon: STAFF[0]
+    })
+})
+app.get("/staff/chris", (req, res)=>{
+    res.render("staff-pages/chris.ejs", {
+        chris: STAFF[1]
+    })
+})
+app.get("/staff/courtney", (req, res)=>{
+    res.render("staff-pages/courtney.ejs", {
+        courtney: STAFF[2]
+    })
+})
+app.get("/staff/kim", (req, res)=>{
+    res.render("staff-pages/kim.ejs", {
+        kim: STAFF[3]
+    })
+})
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------\\
+
     //Links Show Page
 app.get("/links", (req, res)=>{
     res.render("links.ejs", {
