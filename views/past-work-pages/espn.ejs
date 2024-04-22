@@ -6,6 +6,14 @@
     <title>ESPN</title>
 </head>
 <body>
+    <%- include("../nav.ejs") %>
     <h1>ESPN</h1>
+    <hr>
+    <h2>Project Name: <%= espn.project %></h2>
+    <h2><em><%= espn.description %></em></h2>
+    <ul>
+        <li>Staff: <%= espn.staff %> Developer<%= espn.staff <=1 ? "" : "s" %></li>
+        <li>Project Duration: <%= espn.duration %></li>
+    </ul>
 </body>
 </html>

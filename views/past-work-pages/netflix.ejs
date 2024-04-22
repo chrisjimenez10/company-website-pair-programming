@@ -6,6 +6,14 @@
     <title>Netflix</title>
 </head>
 <body>
+    <%- include("../nav.ejs") %>
     <h1>Netflix</h1>
+    <hr>
+    <h2>Project Name: <%= netflix.project %></h2>
+    <h2><em><%= netflix.description %></em></h2>
+    <ul>
+        <li>Staff: <%= netflix.staff %> Developer<%= netflix.staff <=1 ? "" : "s" %></li>
+        <li>Project Duration: <%= netflix.duration %></li>
+    </ul>
 </body>
 </html>

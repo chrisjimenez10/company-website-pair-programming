@@ -6,6 +6,17 @@
     <title>Contact Us</title>
 </head>
 <body>
-    
+    <%- include("nav.ejs") %>
+    <h1>Contact Information and Technincal Support</h1>
+    <hr>
+    <h2>Email: <%= contactUs.email %></h2>
+    <h2>Phone Number #<%= contactUs.phoneNumber %></h2>
+    <h2>Address: <%= contactUs.address %></h2>
+    <h2>Main Hours of Operation: <%= contactUs.hoursOperation %></h2>
+    <% if(contactUs.isOpen === false){ %>
+        <h3><em>Sorry, we are currently closed - Please call during main hours of operation</em></h3>
+   <% }else{ %>
+        <h3><em>We currently have staff on duty - Please call for more information</em></h3>
+    <% } %>
 </body>
 </html>

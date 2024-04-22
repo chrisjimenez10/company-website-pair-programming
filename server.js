@@ -15,11 +15,19 @@ app.listen(port, ()=>{
 
 //Data
 const PASTWORK = [
-    {company: "Facebook", staff: 4, duration: "two months", project: "Advertising", completed: true },
-    {company: "Netflix", staff: 2, duration: "one month", project: "New Arrivals", completed: false },
-    {company: "Capital-One", staff: 3, duration: "three months", project: "Investing Branch", completed: true },
-    {company: "ESPN", staff: 1, duration: "three weeks", project: "NBA Play-Offs Interface", completed: true },
+    {company: "Facebook", staff: 4, duration: "Two months", project: "Advertising", completed: true, description: "Helped Facebook create a robust and dynamic advertising feature" },
+    {company: "Netflix", staff: 2, duration: "one month", project: "New Arrivals", completed: false, description: "Helped Netflix create a carousel feature for their new arrivals" },
+    {company: "Capital-One", staff: 3, duration: "three months", project: "Investing Branch", completed: true, description: "Helped Capital One create their newest financial service of investing with crypto"},
+    {company: "ESPN", staff: 1, duration: "three weeks", project: "NBA Play-Offs Interface", completed: true, description: "Helped ESPN create the newest interface for the NBA play-offs"},
 ]
+
+const CONTACTUS = {
+    email: "karlonchris2020@gmail.com",
+    phoneNumber: "(555)-555-5555",
+    address: "124 Main Street, Charlestown, VA, 12345",
+    hoursOperation: "Mon - Fri * 8AM - 4PM CST",
+    isOpen: true,
+}
 
 
 
@@ -50,7 +58,7 @@ app.get("/companyhistory", (req, res)=>{
     //Contact Us Show Page
 app.get("/contactus", (req, res)=>{
     res.render("contact-us.ejs", {
-        
+        contactUs: CONTACTUS
     })
 })
     //Past Work Show Page
@@ -61,27 +69,23 @@ app.get("/pastwork", (req, res)=>{
 })
 
 app.get("/pastwork/Facebook", (req, res)=>{
-    const facebook = req.params.facebook;
     res.render("past-work-pages/facebook.ejs", {
-
+        facebook: PASTWORK[0]
     })
 })
 app.get("/pastwork/Netflix", (req, res)=>{
-    const facebook = req.params.facebook;
     res.render("past-work-pages/netflix.ejs", {
-
+        netflix: PASTWORK[1]
     })
 })
 app.get("/pastwork/Capital-One", (req, res)=>{
-    const facebook = req.params.facebook;
     res.render("past-work-pages/capital-one.ejs", {
-
+        capitalOne: PASTWORK[2]
     })
 })
 app.get("/pastwork/ESPN", (req, res)=>{
-    const facebook = req.params.facebook;
     res.render("past-work-pages/espn.ejs", {
-
+        espn: PASTWORK[3]
     })
 })
 
