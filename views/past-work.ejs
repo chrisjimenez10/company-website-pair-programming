@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Work</title>
+</head>
+<body>
+    <%- include("nav.ejs") %>
+    <h1>Past Work</h1>
+    <hr>
+    <% pastWork.forEach(company => { %>
+        <ul>
+            <a href="/pastwork/:companyname"><li><%= company.company %></li></a>
+        </ul>
+    <% }) %>
+</body>
+</html>
