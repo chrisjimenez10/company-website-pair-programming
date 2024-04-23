@@ -8,12 +8,14 @@
 </head>
 <body>
     <div><%- include("nav.ejs") %></div>
-    <h1>Past Work</h1>
-    <hr>
-    <% pastWork.forEach(company => { %>
-        <ul>
-           <a href="/pastwork/<%= company.company %>"><li><%= company.company %></li></a>
-        </ul>
-    <% }) %>
+    <main>
+        <h1>Past Work</h1>
+        <hr>
+        <% pastWork.forEach(company => { %>
+            <ul>
+            <a id="links" href="/pastwork/<%= company.company %>"><li><%= company.company %></li></a>
+            </ul>
+        <% }) %>
+    </main>
 </body>
 </html>

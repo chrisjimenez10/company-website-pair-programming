@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 body {
-    background-color: burlywood;
+    background-image: url("https://images.pexels.com/photos/1024248/pexels-photo-1024248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: 1900px 1200px;
     color: black;
 }
 div {
@@ -10,4 +11,19 @@ div {
     height: 2rem;
     border-radius: 10px;
     padding: 5px;
+    width: 700px;
+}
+#links {
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
+}
+main {
+    background-color: hsla(0, 0%, 16%, 0.87);
+    width: 500px;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
 }
