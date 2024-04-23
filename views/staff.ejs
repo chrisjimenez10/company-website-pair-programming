@@ -8,9 +8,15 @@
 </head>
 <body>
     <div><%- include("nav.ejs") %></div>
-    <h1>Staff Members</h1>
-    <% staff.forEach(person => { %>
-        <a href="/staff/<%= person.path %>"><li><%= person.name %></li></a>
-    <% }) %>
+    <main>
+        <h1>Staff Members</h1>
+        <hr>
+        <% staff.forEach(person => { %>
+            <a href="/staff/<%= person.path %>"><li><%= person.name %></li></a>
+        <% }) %>
+    </main>
+    <section class="one"><p><%= messages[0] %></p></section>
+    <section class="two"><%= messages[1] %></section>
+    <section class="three"><%= messages[2] %></section>
 </body>
 </html>

@@ -48,8 +48,18 @@ const STAFF = [
     {name: "Kim Johnson", age: 32, email: "johnsonkim@gmail.com", position: "Lead Designer", bio: "Front-End Web Designer with a background in Fashion Studies from Cal Tech", path: "kim"},
 ]
 
+const STAFFMESSAGES = [
+    "Success is not final, failure is not fatal, it is the courage to continue that counts - Kim",
+    "The only way to do great work is to love what you do - Courtney",
+    "Believe you can and you're halfway there - Karlon"
+]
+
 const COMPANYHISTORY = "Karlon & Chris Tech Agency, founded in 2020 by tech enthusiasts with a passion for innovation, is a dynamic startup IT agency dedicated to revolutionizing digital landscapes. Specializing in bespoke software development, cloud solutions, and cybersecurity,leveraging cutting-edge technologies to empower businesses of all sizes to thrive in the digital age. With a client-centric approach and a commitment to excellence, the agency strives to deliver tailor-made IT solutions that drive efficiency, scalability, and long-term success for its clients across diverse industries.";
 
+const OPENCLOSE = [
+    "Sorry, we are currently closed - Please call during main hours of operation",
+    "We currently have staff on duty - Please call for more information"
+]
 
 
 
@@ -77,7 +87,9 @@ app.get("/companyhistory", (req, res)=>{
     //Contact Us Show Page
 app.get("/contactus", (req, res)=>{
     res.render("contact-us.ejs", {
-        contactUs: CONTACTUS
+        contactUs: CONTACTUS,
+        open: OPENCLOSE[1],
+        close: OPENCLOSE[0]
     })
 })
     //Past Work Show Page
@@ -114,7 +126,8 @@ app.get("/pastwork/ESPN", (req, res)=>{
 app.get("/staff", (req, res)=>{
 
     res.render("staff.ejs", {
-        staff: STAFF
+        staff: STAFF,
+        messages: STAFFMESSAGES
     })
 })
 

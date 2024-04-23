@@ -14,10 +14,10 @@
         <h2>Phone Number #<%= contactUs.phoneNumber %></h2>
         <h2>Address: <%= contactUs.address %></h2>
         <h2>Main Hours of Operation: <%= contactUs.hoursOperation %></h2>
-        <% if(contactUs.isOpen === false){ %>
-            <h3><em>Sorry, we are currently closed - Please call during main hours of operation</em></h3>
+        <% if(contactUs.isOpen === true){ %>
+            <h3><em><%= open %></em></h3>
         <% }else{ %>
-            <h3><em>We currently have staff on duty - Please call for more information</em></h3>
+            <h3><em><%= close %></em></h3>
         <% } %>
    </main>
 </body>

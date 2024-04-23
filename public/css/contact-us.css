@@ -19,4 +19,7 @@ main {
     background-color: hsla(0, 0%, 16%, 0.45);
     color: whitesmoke;
     margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 10px;
 }
