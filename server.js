@@ -1,3 +1,5 @@
+//Pair Programming: Karlon + Chris
+
 //Import 
 const express = require("express");
 const morgan = require("morgan");
@@ -60,7 +62,6 @@ const OPENCLOSE = [
     "Sorry, we are currently closed - Please call during main hours of operation",
     "We currently have staff on duty - Please call for more information"
 ]
-
 
 //Routes
 app.get("/", (req, res)=>{
