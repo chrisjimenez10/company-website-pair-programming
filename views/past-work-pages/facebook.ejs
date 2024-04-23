@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook</title>
+    <link rel="stylesheet" href="../css/companies.css">
 </head>
 <body>
-    <%- include("../nav.ejs") %>
+    <div><%- include("../nav.ejs") %></div>
     <h1>Facebook</h1>
     <hr>
-    <h2>Project Name: <%= facebook.project %></h2>
-    <h2><em><%= facebook.description %></em></h2>
-    <ul>
-        <li>Staff: <%= facebook.staff %> Developer<%= facebook.staff <=1 ? "" : "s" %></li>
-        <li>Project Duration: <%= facebook.duration %></li>
-    </ul>
+    <main>
+        <h2>Project Name: <%= facebook.project %></h2>
+        <h2><em><%= facebook.description %></em></h2>
+        <ul>
+            <li>Staff: <%= facebook.staff %> Developer<%= facebook.staff <=1 ? "" : "s" %></li>
+            <li>Project Duration: <%= facebook.duration %></li>
+        </ul>
+    </main>
 </body>
 </html>

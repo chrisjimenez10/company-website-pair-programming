@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Founder: Karlon</title>
+    <link rel="stylesheet" href="../css/people.css">
 </head>
 <body>
-    <%- include("../nav.ejs") %>
-    <h1><%= karlon.position %>: <%= karlon.name %> </h1>
-    <h2>Bio: <%= karlon.bio %></h2>
-    <ul>
-        <li>Age: <%= karlon.age %></li>
-        <li> Contact Information: <%= karlon.email %></li>
-    </ul>
+    <div><%- include("../nav.ejs") %></div>
+        <h1><%= karlon.position %>: <%= karlon.name %> </h1>
+        <hr>
+    <main>
+        <h2>Bio: <%= karlon.bio %></h2>
+        <ul>
+            <li>Age: <%= karlon.age %></li>
+            <li> Contact Information: <%= karlon.email %></li>
+        </ul>
+    </main>
 </body>
 </html>

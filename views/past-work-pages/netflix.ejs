@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
+    <link rel="stylesheet" href="../css/companies.css">
 </head>
 <body>
-    <%- include("../nav.ejs") %>
+    <div><%- include("../nav.ejs") %></div>
     <h1>Netflix</h1>
     <hr>
-    <h2>Project Name: <%= netflix.project %></h2>
-    <h2><em><%= netflix.description %></em></h2>
-    <ul>
-        <li>Staff: <%= netflix.staff %> Developer<%= netflix.staff <=1 ? "" : "s" %></li>
-        <li>Project Duration: <%= netflix.duration %></li>
-    </ul>
+    <main>
+        <h2>Project Name: <%= netflix.project %></h2>
+        <h2><em><%= netflix.description %></em></h2>
+        <ul>
+            <li>Staff: <%= netflix.staff %> Developer<%= netflix.staff <=1 ? "" : "s" %></li>
+            <li>Project Duration: <%= netflix.duration %></li>
+        </ul>
+    </main>
 </body>
 </html>

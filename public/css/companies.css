@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    color: white;
+    background: -webkit-linear-gradient(left, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,218,255,1) 68%);
+}
+div {
+    background-color: hsla(0, 0%, 16%, 0.25);
+    height: 2rem;
+    border-radius: 10px;
+    padding: 5px;
+    width: 700px;
+}
+a {
+    padding: 15px;
+    color: white;
+}
+h1 {
+    margin-left: 20px;
+}
+hr {
+    width: 700px;
+    position: absolute;
+    left: 0px;
+}
+main {
+    margin-top: 50px;
+    margin-left: 20px;
+}
