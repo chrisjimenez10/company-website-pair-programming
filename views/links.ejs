@@ -9,6 +9,7 @@
 <body>
     <div><%- include("nav.ejs") %></div>
     <h1>Links To Business Associates</h1>
+    <hr>
     <% links.forEach(link => { %>
         <ul>
             <a href="<%= link.url %>"><li><%= link.company %></li></a>
